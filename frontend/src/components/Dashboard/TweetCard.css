@@ -1,0 +1,149 @@
+.tweet-card {
+    background: var(--gray-lighter);
+    padding: 20px;
+    border-radius: 12px;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.tweet-card:hover {
+    border-color: var(--primary-light);
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.tweet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.tweet-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 15px;
+}
+
+.author-username {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.tweet-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tweet-time {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.tweet-lang {
+    padding: 4px 8px;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.tweet-content {
+    margin-bottom: 12px;
+}
+
+.tweet-content p {
+    color: var(--dark);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.tweet-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.keyword-tag {
+    padding: 4px 12px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.engagement-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.stat svg {
+    color: var(--gray);
+}
+
+.stat:hover svg {
+    color: var(--primary);
+}
+
+.view-tweet-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    background: var(--gray-lighter);
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view-tweet-button:hover {
+    background: var(--primary);
+    color: white;
+}
