@@ -1,0 +1,294 @@
+.information-flow {
+    width: 100%;
+    color: #ffffff;
+}
+
+.flow-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.flow-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.flow-header p {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.flow-visualization {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.platforms-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.platform-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.node-circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.node-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.node-info {
+    text-align: center;
+}
+
+.node-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.node-info span {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.flow-connections {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flow-connection {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.connection-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.source-platform,
+.target-platform {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.source-platform i,
+.target-platform i {
+    font-size: 1.1rem;
+}
+
+.flow-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.flow-arrow i {
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.flow-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.flow-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.flow-percentage {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+}
+
+.flow-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.flow-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.flow-metrics {
+    margin-bottom: 2rem;
+}
+
+.flow-metrics h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.metric-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.metric-card i {
+    font-size: 1.5rem;
+    color: #667eea;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.metric-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    font-weight: 500;
+}
+
+.flow-insights h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.insight-item i {
+    font-size: 1.5rem;
+    color: #667eea;
+    margin-top: 0.25rem;
+    min-width: 2rem;
+}
+
+.insight-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.insight-content p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flow-visualization {
+        padding: 1rem;
+    }
+
+    .platforms-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .connection-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-card {
+        padding: 1rem;
+    }
+
+    .node-circle {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.2rem;
+    }
+}

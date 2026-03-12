@@ -1,0 +1,495 @@
+.communities-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #1a1a1a;
+    color: white;
+}
+
+.communities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #2d2d2d;
+    border-bottom: 1px solid #333;
+}
+
+.header-left h1 {
+    margin: 0 0 5px 0;
+    color: #4ecdc4;
+    font-size: 24px;
+}
+
+.header-left p {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.header-stats {
+    display: flex;
+    gap: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4ecdc4;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #ccc;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.communities-controls {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #2d2d2d;
+    border-bottom: 1px solid #333;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-group label {
+    color: #4ecdc4;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px;
+}
+
+.button-group button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.button-group button:hover:not(:disabled) {
+    background: rgba(78, 205, 196, 0.2);
+    border-color: #4ecdc4;
+}
+
+.button-group button.active {
+    background: #4ecdc4;
+    color: #1a1a1a;
+    border-color: #4ecdc4;
+}
+
+.button-group button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.control-group select {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.control-group select:focus {
+    outline: none;
+    border-color: #4ecdc4;
+}
+
+.communities-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #333;
+    border-top: 3px solid #4ecdc4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Communities Overview */
+.communities-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.communities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.community-card {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-left: 4px solid #4ecdc4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.community-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.1);
+    border-color: #4ecdc4;
+}
+
+.community-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.community-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.platform-badge {
+    background: rgba(78, 205, 196, 0.2);
+    color: #4ecdc4;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.community-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat label {
+    color: #ccc;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.stat span {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.activity-level {
+    text-transform: capitalize;
+}
+
+.activity-level.high {
+    color: #4ecdc4;
+}
+
+.activity-level.medium {
+    color: #feca57;
+}
+
+.activity-level.low {
+    color: #ff6b6b;
+}
+
+.community-topics {
+    margin-bottom: 15px;
+}
+
+.community-topics label {
+    color: #ccc;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.topics-list {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.topic-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 10px;
+}
+
+.community-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.member-count {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.view-button {
+    color: #4ecdc4;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Platform Distribution */
+.platform-distribution h3 {
+    margin: 0 0 20px 0;
+    color: #4ecdc4;
+    text-align: center;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.platform-card {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+.platform-card:hover {
+    border-color: #4ecdc4;
+    transform: translateY(-2px);
+}
+
+.platform-card h4 {
+    margin: 0 0 10px 0;
+    color: white;
+    font-size: 16px;
+}
+
+.platform-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.platform-stats span {
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* Community Graph View */
+.community-graph-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.graph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #2d2d2d;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.graph-header h3 {
+    margin: 0;
+    color: #4ecdc4;
+}
+
+.community-info {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.graph-container {
+    background: #2d2d2d;
+    border-radius: 8px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.community-members {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.community-members h4 {
+    margin: 0 0 20px 0;
+    color: #4ecdc4;
+    text-align: center;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.member-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 15px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+.member-card:hover {
+    border-color: #4ecdc4;
+    transform: translateY(-1px);
+}
+
+.member-info {
+    margin-bottom: 10px;
+}
+
+.member-info h5 {
+    margin: 0 0 5px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.member-platform {
+    color: #4ecdc4;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.member-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .communities-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header-stats {
+        gap: 20px;
+    }
+
+    .communities-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .communities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graph-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .community-info {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .community-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .community-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

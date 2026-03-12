@@ -344,3 +344,159 @@ export const mockKeywords = [
         created_at: '2026-02-01T10:00:00Z'
     }
 ];
+// Mock graph data for network visualization
+export const mockGraphData = {
+    nodes: [
+        {
+            id: 'user1',
+            username: '@sarah_student',
+            display_name: 'Sarah Ahmed',
+            platform: 'twitter',
+            community: '1',
+            influence_score: 0.8,
+            connections: 25,
+            followers_count: 150
+        },
+        {
+            id: 'user2',
+            username: '@ahmed_tech',
+            display_name: 'Ahmed Hassan',
+            platform: 'instagram',
+            community: '1',
+            influence_score: 0.6,
+            connections: 18,
+            followers_count: 89
+        },
+        {
+            id: 'user3',
+            username: '@john_eng',
+            display_name: 'John Smith',
+            platform: 'twitter',
+            community: '2',
+            influence_score: 0.9,
+            connections: 32,
+            followers_count: 234
+        },
+        {
+            id: 'user4',
+            username: '@layla_krd',
+            display_name: 'Layla Karim',
+            platform: 'facebook',
+            community: '2',
+            influence_score: 0.7,
+            connections: 22,
+            followers_count: 178
+        },
+        {
+            id: 'user5',
+            username: '@maria_cs',
+            display_name: 'Maria Lopez',
+            platform: 'instagram',
+            community: '1',
+            influence_score: 0.5,
+            connections: 15,
+            followers_count: 67
+        },
+        {
+            id: 'user6',
+            username: '@david_math',
+            display_name: 'David Chen',
+            platform: 'twitter',
+            community: '3',
+            influence_score: 0.85,
+            connections: 28,
+            followers_count: 201
+        },
+        {
+            id: 'user7',
+            username: '@fatima_med',
+            display_name: 'Fatima Ali',
+            platform: 'facebook',
+            community: '3',
+            influence_score: 0.4,
+            connections: 12,
+            followers_count: 45
+        },
+        {
+            id: 'user8',
+            username: '@alex_bio',
+            display_name: 'Alex Johnson',
+            platform: 'instagram',
+            community: '2',
+            influence_score: 0.65,
+            connections: 20,
+            followers_count: 123
+        },
+        {
+            id: 'user9',
+            username: '@omar_eng',
+            display_name: 'Omar Rashid',
+            platform: 'twitter',
+            community: '1',
+            influence_score: 0.75,
+            connections: 24,
+            followers_count: 189
+        },
+        {
+            id: 'user10',
+            username: '@hana_krd',
+            display_name: 'Hana Mahmoud',
+            platform: 'facebook',
+            community: '3',
+            influence_score: 0.55,
+            connections: 16,
+            followers_count: 98
+        }
+    ],
+    links: [
+        { source: 'user1', target: 'user2', type: 'mention', weight: 3, platform: 'twitter' },
+        { source: 'user1', target: 'user5', type: 'reply', weight: 2, platform: 'twitter' },
+        { source: 'user2', target: 'user3', type: 'mention', weight: 1, platform: 'instagram' },
+        { source: 'user3', target: 'user4', type: 'retweet', weight: 4, platform: 'twitter' },
+        { source: 'user4', target: 'user8', type: 'comment', weight: 2, platform: 'facebook' },
+        { source: 'user5', target: 'user1', type: 'mention', weight: 2, platform: 'instagram' },
+        { source: 'user6', target: 'user7', type: 'reply', weight: 3, platform: 'twitter' },
+        { source: 'user7', target: 'user6', type: 'comment', weight: 1, platform: 'facebook' },
+        { source: 'user8', target: 'user3', type: 'mention', weight: 2, platform: 'instagram' },
+        { source: 'user2', target: 'user8', type: 'reply', weight: 1, platform: 'instagram' },
+        { source: 'user6', target: 'user1', type: 'retweet', weight: 2, platform: 'twitter' },
+        { source: 'user4', target: 'user6', type: 'mention', weight: 1, platform: 'facebook' },
+        { source: 'user9', target: 'user1', type: 'reply', weight: 3, platform: 'twitter' },
+        { source: 'user9', target: 'user5', type: 'mention', weight: 2, platform: 'twitter' },
+        { source: 'user10', target: 'user7', type: 'comment', weight: 2, platform: 'facebook' },
+        { source: 'user10', target: 'user4', type: 'mention', weight: 1, platform: 'facebook' }
+    ],
+    communities: [
+        {
+            id: '1',
+            size: 4,
+            density: 0.67,
+            primary_platform: 'twitter',
+            dominant_topics: ['exam', 'assignment'],
+            members: ['user1', 'user2', 'user5', 'user9']
+        },
+        {
+            id: '2',
+            size: 3,
+            density: 0.5,
+            primary_platform: 'instagram',
+            dominant_topics: ['lecture', 'syllabus'],
+            members: ['user3', 'user4', 'user8']
+        },
+        {
+            id: '3',
+            size: 3,
+            density: 0.8,
+            primary_platform: 'facebook',
+            dominant_topics: ['university', 'course'],
+            members: ['user6', 'user7', 'user10']
+        }
+    ],
+    metrics: {
+        total_nodes: 10,
+        total_edges: 16,
+        density: 0.36,
+        clustering_coefficient: 0.45,
+        average_path_length: 2.1
+    }
+};

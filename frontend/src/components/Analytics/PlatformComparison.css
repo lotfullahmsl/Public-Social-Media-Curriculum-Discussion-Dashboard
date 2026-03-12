@@ -1,0 +1,205 @@
+.platform-comparison {
+    width: 100%;
+    color: #ffffff;
+}
+
+.comparison-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.comparison-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.comparison-header p {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.platform-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.platform-metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.platform-metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.platform-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.platform-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.platform-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    font-weight: 500;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chart-container h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.engagement-comparison {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.engagement-comparison h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.engagement-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.engagement-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.engagement-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+}
+
+.platform-name {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.engagement-value {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.bar-container {
+    flex: 1;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.8s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .platform-metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .chart-container {
+        padding: 1rem;
+    }
+
+    .platform-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .engagement-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .engagement-info {
+        min-width: auto;
+    }
+}
